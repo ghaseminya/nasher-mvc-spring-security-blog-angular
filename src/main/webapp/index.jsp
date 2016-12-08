@@ -69,6 +69,7 @@
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">
+                ids of all blogs:
                 <c:forEach items="${blogPostDao.findAll()}" var="entry">
                 blog id is:${entry.getId()}
                 </c:forEach>
