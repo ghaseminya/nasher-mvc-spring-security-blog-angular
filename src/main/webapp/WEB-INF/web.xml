@@ -37,7 +37,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>RestService</servlet-name>
-		<url-pattern>/rest/*</url-pattern>
+		<url-pattern>/admin/rest/*</url-pattern>
 	</servlet-mapping>
 
 

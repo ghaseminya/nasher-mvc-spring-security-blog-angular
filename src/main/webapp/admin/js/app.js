@@ -3,22 +3,22 @@ angular.module('exampleApp', ['ngRoute', 'ngCookies', 'exampleApp.services'])
 		[ '$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
 			
 			$routeProvider.when('/create', {
-				templateUrl: 'admin/partials/create.html',
+				templateUrl: 'partials/create.html',
 				controller: CreateController
 			});
 			
 			$routeProvider.when('/edit/:id', {
-				templateUrl: 'admin/partials/edit.html',
+				templateUrl: 'partials/edit.html',
 				controller: EditController
 			});
 
 			$routeProvider.when('/login', {
-				templateUrl: 'admin/partials/login.html',
+				templateUrl: 'partials/login.html',
 				controller: LoginController
 			});
 			
 			$routeProvider.otherwise({
-				templateUrl: 'admin/partials/index.html',
+				templateUrl: 'partials/index.html',
 				controller: IndexController
 			});
 			
@@ -171,7 +171,7 @@ var services = angular.module('exampleApp.services', ['ngResource']);
 
 services.factory('UserService', function($resource) {
 	
-	return $resource('rest/user/:action', {},
+	return $resource('admin/rest/user/:action', {},
 			{
 				authenticate: {
 					method: 'POST',
@@ -184,5 +184,5 @@ services.factory('UserService', function($resource) {
 
 services.factory('BlogPostService', function ($resource) {
 
-	return $resource('rest/blogposts/:id', {id: '@id'});
+	return $resource('admin/rest/blogposts/:id', {id: '@id'});
 });
