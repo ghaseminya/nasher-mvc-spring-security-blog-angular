@@ -6,11 +6,13 @@
 	<packaging>war</packaging>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
 		<version.org.springframework.security>4.0.4.RELEASE</version.org.springframework.security>
 		<version.org.springframework>4.2.5.RELEASE</version.org.springframework>
 		<version.com.sun.jersey.contribs>1.19.1</version.com.sun.jersey.contribs>
 		<version.org.hibernate>4.2.21.Final</version.org.hibernate>
-		<org.slf4j.version>1.7.7</org.slf4j.version>
+		<org.slf4j.version>1.7.5</org.slf4j.version>
 		<javax.servlet-api.version>2.5</javax.servlet-api.version>
 		<maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
 		<org.hsqldb.version>2.3.2</org.hsqldb.version>
@@ -35,7 +37,7 @@
 	</licenses>
 
 	<prerequisites>
-		<maven>2.2.1</maven>
+		<maven>3.3</maven>
 	</prerequisites>
 
 	<build>
@@ -46,7 +48,22 @@
 				<version>4.3.0</version>
 				<configuration>
 					<repoToken>JLiPcnAvQM7yI6zrPJCeSHmSQ4mJ8ANqE</repoToken>
+					<format>xml</format>
+					<aggregate>true</aggregate>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<check>true</check>
+					<format>xml</format>
+					<maxmem>256m</maxmem>
+					<!-- aggregated reports for multi-module projects -->
+					<aggregate>true</aggregate>
+				</configuration>
+
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
