@@ -70,7 +70,7 @@
             <!-- Blog Entries Column -->
             <div class="col-md-8">
                 <c:forEach items="${blogPostDao.findAll()}" var="entry">
-                ${entry.getId()}
+                blog id is:${entry.getId()}
                 </c:forEach>
                 <h1 class="page-header">
                     Page Heading
