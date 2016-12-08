@@ -3,22 +3,22 @@ angular.module('exampleApp', ['ngRoute', 'ngCookies', 'exampleApp.services'])
 		[ '$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
 			
 			$routeProvider.when('/create', {
-				templateUrl: 'partials/create.html',
+				templateUrl: 'admin/partials/create.html',
 				controller: CreateController
 			});
 			
 			$routeProvider.when('/edit/:id', {
-				templateUrl: 'partials/edit.html',
+				templateUrl: 'admin/partials/edit.html',
 				controller: EditController
 			});
 
 			$routeProvider.when('/login', {
-				templateUrl: 'partials/login.html',
+				templateUrl: 'admin/partials/login.html',
 				controller: LoginController
 			});
 			
 			$routeProvider.otherwise({
-				templateUrl: 'partials/index.html',
+				templateUrl: 'admin/partials/index.html',
 				controller: IndexController
 			});
 			
