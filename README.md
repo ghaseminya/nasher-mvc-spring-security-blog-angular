@@ -1,6 +1,7 @@
 Nasher
 ===========================
 
+[![Build Status](https://travis-ci.org/mmghasemi/nasher.svg?branch=master)](https://travis-ci.org/mmghasemi/nasher)
 
 Nasher is a light Java bloging system
 
