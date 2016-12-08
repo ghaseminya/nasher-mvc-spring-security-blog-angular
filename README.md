@@ -2,7 +2,7 @@ Nasher
 ===========================
 
 [![Build Status](https://travis-ci.org/mmghasemi/nasher.svg?branch=master)](https://travis-ci.org/mmghasemi/nasher)
-
+[![Apache License](http://img.shields.io/badge/license-apache2-orange.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
 Nasher is a light Java bloging system
 
 
