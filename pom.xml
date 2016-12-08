@@ -1,0 +1,182 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ir.mnm</groupId>
+	<artifactId>nasher</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<properties>
+		<version.org.springframework.security>4.0.4.RELEASE</version.org.springframework.security>
+		<version.org.springframework>4.2.5.RELEASE</version.org.springframework>
+		<version.com.sun.jersey.contribs>1.19.1</version.com.sun.jersey.contribs>
+		<version.org.hibernate>4.2.21.Final</version.org.hibernate>
+		<org.slf4j.version>1.7.7</org.slf4j.version>
+		<javax.servlet-api.version>2.5</javax.servlet-api.version>
+		<maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+		<org.hsqldb.version>2.3.2</org.hsqldb.version>
+		<commons-dbcp.version>1.4</commons-dbcp.version>
+		<junit.version>4.11</junit.version>
+		<org.eclipse.jetty.jetty-maven-plugin.version>9.1.1.v20140108</org.eclipse.jetty.jetty-maven-plugin.version>
+	</properties>
+
+	<developers>
+		<developer>
+			<name>Mohammad Mahdi</name>
+			<url>http://j2eedev.ir</url>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<prerequisites>
+		<maven>2.2.1</maven>
+	</prerequisites>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${org.eclipse.jetty.jetty-maven-plugin.version}</version>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<scm>
+		<developerConnection>scm:git:https://github.com/mmghasemi/nasher.git</developerConnection>
+	</scm>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${version.org.springframework}</version>
+		</dependency>
+		
+		<!-- Huh? Spring Jdbc is suddenly marked as provided by spring-orm? -->
+		 <dependency>
+		     <groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${version.org.springframework}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${version.org.springframework}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-spring</artifactId>
+			<version>${version.com.sun.jersey.contribs}</version>
+			<!-- jersey-spring uses spring 2.5, we want to use 3.x instead -->
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-web</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-beans</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-aop</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>${version.com.sun.jersey.contribs}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>${org.hsqldb.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>${commons-dbcp.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${version.org.hibernate}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${version.org.springframework.security}</version>
+		</dependency>
+		
+		<dependency>
+        	<groupId>org.springframework.security</groupId>
+        	<artifactId>spring-security-config</artifactId>
+        	<version>${version.org.springframework.security}</version>
+    	</dependency>
+    	
+    	<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${javax.servlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+    	<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-test</artifactId>
+    		<version>${version.org.springframework}</version>
+    		<scope>test</scope>
+    	</dependency>
+    	
+    	<dependency>
+    		<groupId>junit</groupId>
+    		<artifactId>junit</artifactId>
+    		<version>${junit.version}</version>
+    		<scope>test</scope>
+    	</dependency>
+	</dependencies>
+	
+</project>
