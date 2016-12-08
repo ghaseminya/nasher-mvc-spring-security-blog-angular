@@ -69,7 +69,7 @@
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">
-                ids of all blogs:
+                ids of all blogs:bloglist
                 <c:forEach items="${bloglist.findAll()}" var="entry">
                 blog id is:${entry.getId()}
                 </c:forEach>
