@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ir.mnm</groupId>
 	<artifactId>nasher</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>$\{project.artifactId}-$\{project.version}-r$\{buildNumber}-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<properties>
