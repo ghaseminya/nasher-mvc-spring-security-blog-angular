@@ -6,7 +6,7 @@ import ir.mnm.nasher.entity.BlogPost;
 /**
  * Definition of a Data Access Object that can perform CRUD Operations for {@link BlogPost}s.
  *
- * @author Philip W. Sorst <philip@sorst.net>
+ * @author Mohammad Mahdi mohammad.ghasemy@gmail.com
  */
 public interface BlogPostDao extends Dao<BlogPost, Long>
 {

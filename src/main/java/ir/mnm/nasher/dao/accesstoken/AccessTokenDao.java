@@ -4,7 +4,7 @@ import ir.mnm.nasher.dao.Dao;
 import ir.mnm.nasher.entity.AccessToken;
 
 /**
- * @author Philip Washington Sorst <philip@sorst.net>
+ * @author Mohammad Mahdi mohammad.ghasemy@gmail.com
  */
 public interface AccessTokenDao extends Dao<AccessToken, Long>
 {

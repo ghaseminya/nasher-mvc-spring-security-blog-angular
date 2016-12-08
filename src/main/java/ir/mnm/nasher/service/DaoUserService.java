@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.UUID;
 
 /**
- * @author Philip Washington Sorst <philip@sorst.net>
+ * @author Mohammad Mahdi mohammad.ghasemy@gmail.com
  */
 public class DaoUserService implements UserService
 {

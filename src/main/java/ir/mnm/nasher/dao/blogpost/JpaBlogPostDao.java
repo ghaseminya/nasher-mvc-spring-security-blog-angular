@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * JPA Implementation of a {@link BlogPostDao}.
  *
- * @author Philip Washington Sorst <philip@sorst.net>
+ * @author Mohammad Mahdi mohammad.ghasemy@gmail.com
  */
 public class JpaBlogPostDao extends JpaDao<BlogPost, Long> implements BlogPostDao
 {

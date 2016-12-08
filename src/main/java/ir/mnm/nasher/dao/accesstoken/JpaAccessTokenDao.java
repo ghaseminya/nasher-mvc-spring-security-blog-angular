@@ -10,7 +10,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 /**
- * @author Philip Washington Sorst <philip@sorst.net>
+ * @author Mohammad Mahdi mohammad.ghasemy@gmail.com
  */
 public class JpaAccessTokenDao extends JpaDao<AccessToken, Long> implements AccessTokenDao
 {

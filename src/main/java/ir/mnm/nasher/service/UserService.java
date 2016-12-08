@@ -5,7 +5,7 @@ import ir.mnm.nasher.entity.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 /**
- * @author Philip Washington Sorst <philip@sorst.net>
+ * @author Mohammad Mahdi mohammad.ghasemy@gmail.com
  */
 public interface UserService extends UserDetailsService
 {

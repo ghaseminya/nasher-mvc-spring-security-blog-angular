@@ -12,7 +12,7 @@ import java.util.Date;
 /**
  * Initialize the database with some test entries.
  *
- * @author Philip W. Sorst <philip@sorst.net>
+ * @author Mohammad Mahdi mohammad.ghasemy@gmail.com
  */
 public class DataBaseInitializer
 {
