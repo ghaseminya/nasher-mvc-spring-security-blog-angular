@@ -39,7 +39,19 @@
 		<servlet-name>RestService</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
-	
+
+
+
+
+
+	<servlet>
+		<servlet-name>bloglist</servlet-name>
+		<servlet-class>ir.mnm.nasher.dao.blogpost.JpaBlogPostDao</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bloglist</servlet-name>
+		<url-pattern>/bloglist</url-pattern>
+	</servlet-mapping>
 	<!--
 		Apply Spring Security Filter to all Requests 
 	 -->
