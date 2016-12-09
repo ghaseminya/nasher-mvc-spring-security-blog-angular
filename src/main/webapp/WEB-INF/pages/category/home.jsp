@@ -1,8 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%
-ir.mnm.nasher.util.tools tool=new ir.mnm.nasher.util.tools();
-%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,9 +87,9 @@ ir.mnm.nasher.util.tools tool=new ir.mnm.nasher.util.tools();
                 <p>${entry.getContent()}</p>
                 Tags:${entry.getTags()}
                 <br/>
-                size:${tool.tag(entry.getTags())}
+                size:<%=tool.tag("${entry.getTags()}")%>
                 <ul>
-                <c:forEach items="${tool.tag(entry.getTags())}" var="t">
+                <c:forEach items="${tools.tag(entry.getTags())}" var="t">
                 <li><a href="#">${t}</a></li>
                 </c:forEach>
                 </ul>

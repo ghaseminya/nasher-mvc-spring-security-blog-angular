@@ -38,6 +38,7 @@ public class categoryController {
         ModelAndView model = new ModelAndView("category/home");
         model.addObject("categlists", allcateg);
         model.addObject("bloglists", allEntries);
+        model.addObject("tools", new ir.mnm.nasher.util.tools());
         return model;
 
     }
