@@ -26,6 +26,72 @@ public class BlogPost implements Entity
     @Column
     private String content;
 
+    @Column
+    private String title;
+
+    @Column
+    private String file;
+
+    @Column
+    private String tags;
+
+    @Column
+    private String summary;
+
+    @Column
+    private int sign;
+
+    @Column
+    private int category;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getFile() {
+        return file;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
+    }
+
+    public String getTags() {
+        return tags;
+    }
+
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
+    public int getSign() {
+        return sign;
+    }
+
+    public void setSign(int sign) {
+        this.sign = sign;
+    }
+
+    public int getCategory() {
+        return category;
+    }
+
+    public void setCategory(int category) {
+        this.category = categoty;
+    }
+
     public BlogPost()
     {
         this.date = new Date();

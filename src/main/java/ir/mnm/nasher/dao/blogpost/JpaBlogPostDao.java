@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
@@ -30,6 +31,20 @@ public class JpaBlogPostDao extends JpaDao<BlogPost, Long> implements BlogPostDa
         final CriteriaQuery<BlogPost> criteriaQuery = builder.createQuery(BlogPost.class);
 
         Root<BlogPost> root = criteriaQuery.from(BlogPost.class);
+        criteriaQuery.orderBy(builder.desc(root.get("date")));
+
+        TypedQuery<BlogPost> typedQuery = this.getEntityManager().createQuery(criteriaQuery);
+        return typedQuery.getResultList();
+    }
+    @Override
+    @Transactional(readOnly = true)
+    public List<BlogPost> blogbycateg(int categ){
+        final CriteriaBuilder builder = this.getEntityManager().getCriteriaBuilder();
+        final CriteriaQuery<BlogPost> criteriaQuery = builder.createQuery(BlogPost.class);
+
+        Root<BlogPost> root = criteriaQuery.from(BlogPost.class);
+        Path<String> namePath = root.get("category");
+        criteriaQuery.where(builder.equal(namePath, categ));
         criteriaQuery.orderBy(builder.desc(root.get("date")));
 
         TypedQuery<BlogPost> typedQuery = this.getEntityManager().createQuery(criteriaQuery);
