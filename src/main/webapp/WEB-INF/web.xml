@@ -71,4 +71,15 @@
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 
+
+	<servlet>
+		<description>file io out of project</description>
+		<servlet-name>data</servlet-name>
+		<servlet-class>ir.mnm.nasher.util.dodownload</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>data</servlet-name>
+		<url-pattern>/data/*</url-pattern>
+	</servlet-mapping>
+
 </web-app>

@@ -59,6 +59,7 @@ public class DataBaseInitializer
             int c=new Random().nextInt(3)+1;
             blogPost.setCategory(c);
             blogPost.setSign(1);
+            blogPost.setFile(i+".jpg");
             blogPost.setTitle("Blog title "+i);
             this.blogPostDao.save(blogPost);
             timestamp += 1000 * 60 * 60;

@@ -80,6 +80,7 @@
                 <h2>
                     <a href="#"> ${categlists.get(entry.getCategory()-1).getName()}/Blog Post Title ${entry.getTitle()}</a>
                 </h2>
+                <img src="${pageContext.request.contextPath}/data/${entry.getFile()}"/>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on ${entry.getDate()}</p>
                 <hr>
                 <p>${entry.getContent()}</p>
