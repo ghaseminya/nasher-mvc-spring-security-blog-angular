@@ -61,6 +61,7 @@ public class DataBaseInitializer
             blogPost.setSign(1);
             blogPost.setFile(i+".jpg");
             blogPost.setTitle("Blog title "+i);
+            blogPost.setTags("jsf,j2eedev,java,spring");
             this.blogPostDao.save(blogPost);
             timestamp += 1000 * 60 * 60;
         }
