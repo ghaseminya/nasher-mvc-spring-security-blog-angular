@@ -22,6 +22,9 @@
         <constructor-arg ref="blogPostDao"/>
         <constructor-arg ref="categotyDao"/>
     </bean>
+    <bean name="/signup.html"
+          class="ir.mnm.nasher.web.controller.signController" >
+    </bean>
 
 <bean id="viewResolver"
       class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
