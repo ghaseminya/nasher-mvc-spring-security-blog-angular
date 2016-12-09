@@ -6,7 +6,7 @@
 <!--
 	Beans for controlling...
 	-->
-<bean name="/index.html"
+<bean name="index.html"
       class="ir.mnm.nasher.web.controller.blogs" >
     <constructor-arg ref="blogPostDao"/>
     <constructor-arg ref="categotyDao"/>
