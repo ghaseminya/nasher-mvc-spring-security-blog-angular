@@ -6,7 +6,7 @@
 <!--
 	Beans for controlling...
 	-->
-<bean name="/index.nasher"
+<bean name="/index.html"
       class="ir.mnm.nasher.web.controller.blogs" />
 
 <bean id="viewResolver"
