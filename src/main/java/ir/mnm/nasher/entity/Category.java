@@ -28,6 +28,8 @@ public class Category implements Entity {
         this.parent = parent;
     }
 
+    public Category() {
+    }
 
     public Category(Long id, String name) {
         this.id = id;
