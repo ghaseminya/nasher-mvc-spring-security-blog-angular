@@ -1,9 +1,7 @@
-package ir.mnm.nasher.controler;
+package ir.mnm.nasher.web.controller;
 
-import ir.mnm.nasher.JsonViews;
 import ir.mnm.nasher.dao.blogpost.BlogPostDao;
 import ir.mnm.nasher.entity.BlogPost;
-import org.codehaus.jackson.map.ObjectWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
