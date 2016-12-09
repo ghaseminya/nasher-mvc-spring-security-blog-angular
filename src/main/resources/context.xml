@@ -114,21 +114,6 @@
 		<constructor-arg ref="userService"/>
 	</bean>
 
-	<!--
-	Beans for controlling...
-	-->
-	<bean name="/index.nasher"
-		  class="ir.mnm.nasher.web.controller.blogs" />
-
-	<bean id="viewResolver"
-		  class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
-		<property name="prefix">
-			<value>/WEB-INF/pages/</value>
-		</property>
-		<property name="suffix">
-			<value>.jsp</value>
-		</property>
-	</bean>
 
 
 </beans>
