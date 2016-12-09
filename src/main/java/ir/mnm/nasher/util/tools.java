@@ -13,6 +13,7 @@ public class tools {
         }
         List<String> res=new ArrayList<String>();
         String l[]=in.split("[,،]");
+        System.out.println("tags list"+l.length);
         for(String i:l){
             res.add(i);
         }

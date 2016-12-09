@@ -87,9 +87,12 @@ ir.mnm.nasher.util.tools tool=new ir.mnm.nasher.util.tools();
                 <p><span class="glyphicon glyphicon-time"></span> Posted on ${entry.getDate()}</p>
                 <hr>
                 <p>${entry.getContent()}</p>
+                Tags:${entry.getTags()}
+                <br/>
+                size:${tool.tag(entry.getTags())}
                 <ul>
-                <c:forEach items="${tool.tag(entry.getTag())}" var="t">
-                <li><a href="#">t</a></li>
+                <c:forEach items="${tool.tag(entry.getTags())}" var="t">
+                <li><a href="#">${t}</a></li>
                 </c:forEach>
                 </ul>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
