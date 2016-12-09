@@ -10,6 +10,7 @@ import ir.mnm.nasher.entity.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Date;
+import java.util.Random;
 
 /**
  * Initialize the database with some test entries.
@@ -51,10 +52,13 @@ public class DataBaseInitializer
         this.userDao.save(adminUser);
 
         long timestamp = System.currentTimeMillis() - (1000 * 60 * 60 * 24);
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
             BlogPost blogPost = new BlogPost();
             blogPost.setContent("This is example content " + i);
             blogPost.setDate(new Date(timestamp));
+            blogPost.setCategory(new Random().nextInt(2)+1);
+            blogPost.setSign(1);
+            blogPost.setTitle("Blog title "+i);
             this.blogPostDao.save(blogPost);
             timestamp += 1000 * 60 * 60;
         }

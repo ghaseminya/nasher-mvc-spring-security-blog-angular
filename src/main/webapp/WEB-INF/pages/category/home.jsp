@@ -78,11 +78,12 @@
 
                 <!-- First Blog Post -->
                 <h2>
-                    <a href="#">Blog Post Title ${entry.getId()}</a>
+                    <a href="#"> ${categlists.get(entry.getCategory()).getName()}/Blog Post Title ${entry.getTitle()}</a>
                 </h2>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
+                <p><span class="glyphicon glyphicon-time"></span> Posted on ${entry.getDate()}</p>
                 <hr>
                 <p>${entry.getContent()}</p>
+
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                 <hr>

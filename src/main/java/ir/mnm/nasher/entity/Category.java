@@ -9,9 +9,6 @@ import javax.persistence.Id;
  */
 @javax.persistence.Entity
 public class Category implements Entity {
-    public Category() {
-    }
-
     @Id
     @GeneratedValue
     private Long id;
