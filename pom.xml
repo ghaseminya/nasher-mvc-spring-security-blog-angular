@@ -229,7 +229,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>4.3.4.RELEASE</version>
+            <version>${version.org.springframework}</version>
         </dependency>
 
     </dependencies>
