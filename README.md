@@ -5,8 +5,12 @@
 [![Coverage Status](https://coveralls.io/repos/github/mmghasemi/nasher/badge.svg?branch=master)](https://coveralls.io/github/mmghasemi/nasher?branch=master)
 
 
-Nasher is a light Java bloging system
+Nasher is a light Java blogging system
 
+Admin panel + Home pages
+
+[Demo](http://jnasher.ir)
+[Admin Demo](http://admin.jnasher.ir) username/password=mnm
 
 About
 -----
@@ -26,6 +30,7 @@ Any feedback is welcome, and I will incorporate useful pull requests.
 Technologies
 ------------
 
+* [Spring MVC](http://spring.io)
 * [AngularJS](http://angularjs.org/)
 * [Bootstrap](http://getbootstrap.com/)
 * [Jersey](https://jersey.java.net/)
