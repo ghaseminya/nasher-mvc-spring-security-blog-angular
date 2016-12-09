@@ -1,5 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+ir.mnm.nasher.util.tools tool=new ir.mnm.nasher.util.tools();
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,7 +88,7 @@
                 <hr>
                 <p>${entry.getContent()}</p>
                 <ul>
-                <c:forEach items="${tools.tag(entry.getTag())}" var="t">
+                <c:forEach items="${tool.tag(entry.getTag())}" var="t">
                 <li><a href="#">t</a></li>
                 </c:forEach>
                 </ul>
