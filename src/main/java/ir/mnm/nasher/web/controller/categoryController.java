@@ -24,7 +24,7 @@ public class categoryController {
         this.blogPostDao = blogPostDao;
         this.categoryDao = cd;
     }
-    @RequestMapping(value = "category/home/{categid}", method = RequestMethod.GET)
+    @RequestMapping(value = "category/{title}/{categid}", method = RequestMethod.GET)
     public ModelAndView listblogbycateg(@PathVariable int categid){
         System.out.println(categid);
 
@@ -35,7 +35,7 @@ public class categoryController {
         if(null!=categoryDao)
             allcateg=categoryDao.findAll();
         //return back to index.jsp
-        ModelAndView model = new ModelAndView("category/home");
+        ModelAndView model = new ModelAndView("category/{title}");
         model.addObject("categlists", allcateg);
         model.addObject("bloglists", allEntries);
         return model;

@@ -27,7 +27,7 @@ public class JpaCategoryDao extends JpaDao<Category,Long> implements CategoryDao
         final CriteriaQuery<Category> criteriaQuery = builder.createQuery(Category.class);
 
         Root<Category> root = criteriaQuery.from(Category.class);
-        criteriaQuery.orderBy(builder.desc(root.get("id")));
+        //criteriaQuery.orderBy(builder.desc(root.get("id")));
 
         TypedQuery<Category> typedQuery = this.getEntityManager().createQuery(criteriaQuery);
         return typedQuery.getResultList();

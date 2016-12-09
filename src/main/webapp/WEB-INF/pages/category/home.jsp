@@ -78,7 +78,7 @@
 
                 <!-- First Blog Post -->
                 <h2>
-                    <a href="#"> ${categlists.get(entry.getCategory()).getName()}/Blog Post Title ${entry.getTitle()}</a>
+                    <a href="#"> ${categlists.get(entry.getCategory()-1).getName()}/Blog Post Title ${entry.getTitle()}</a>
                 </h2>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on ${entry.getDate()}</p>
                 <hr>
