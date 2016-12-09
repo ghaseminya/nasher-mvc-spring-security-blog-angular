@@ -7,7 +7,9 @@
 	Beans for controlling...
 	-->
 <bean name="/index.html"
-      class="ir.mnm.nasher.web.controller.blogs" />
+      class="ir.mnm.nasher.web.controller.blogs" >
+    <constructor-arg ref="blogPostDao"/>
+</bean>
 
 <bean id="viewResolver"
       class="org.springframework.web.servlet.view.InternalResourceViewResolver" >

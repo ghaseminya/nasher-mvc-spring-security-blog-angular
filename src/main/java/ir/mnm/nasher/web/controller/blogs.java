@@ -16,8 +16,12 @@ import java.util.List;
 @Controller
 public class blogs {
 
-    @Autowired
+
     private BlogPostDao blogPostDao;
+
+    public blogs(BlogPostDao blogPostDao) {
+        this.blogPostDao = blogPostDao;
+    }
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public ModelAndView listblog(){
