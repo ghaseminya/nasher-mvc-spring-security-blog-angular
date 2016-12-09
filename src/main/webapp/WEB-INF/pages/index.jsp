@@ -46,15 +46,14 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+
+                    <c:forEach items="${categlists}" var="entry">
                     <li>
-                        <a href="#">About</a>
+                                            <a href="#">${entry.name}</a>
                     </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
+                    </c:forEach>
+
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -75,7 +74,7 @@
                     Page Heading
                     <small>Secondary Text</small>
                 </h1>
-                <c:forEach items="${lists}" var="entry">
+                <c:forEach items="${bloglists}" var="entry">
 
                 <!-- First Blog Post -->
                 <h2>

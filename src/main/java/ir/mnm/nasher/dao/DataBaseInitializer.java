@@ -1,8 +1,10 @@
 package ir.mnm.nasher.dao;
 
 import ir.mnm.nasher.dao.blogpost.BlogPostDao;
+import ir.mnm.nasher.dao.category.CategoryDao;
 import ir.mnm.nasher.dao.user.UserDao;
 import ir.mnm.nasher.entity.BlogPost;
+import ir.mnm.nasher.entity.Category;
 import ir.mnm.nasher.entity.Role;
 import ir.mnm.nasher.entity.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -22,16 +24,19 @@ public class DataBaseInitializer
 
     private PasswordEncoder passwordEncoder;
 
+    private CategoryDao categoryDao;
+
     protected DataBaseInitializer()
     {
         /* Default constructor for reflection instantiation */
     }
 
-    public DataBaseInitializer(UserDao userDao, BlogPostDao blogPostDao, PasswordEncoder passwordEncoder)
+    public DataBaseInitializer(UserDao userDao, BlogPostDao blogPostDao, PasswordEncoder passwordEncoder,CategoryDao cad)
     {
         this.userDao = userDao;
         this.blogPostDao = blogPostDao;
         this.passwordEncoder = passwordEncoder;
+        this.categoryDao=cad;
     }
 
     public void initDataBase()
@@ -53,5 +58,9 @@ public class DataBaseInitializer
             this.blogPostDao.save(blogPost);
             timestamp += 1000 * 60 * 60;
         }
+
+        categoryDao.save(new Category(new Long(1),"Java"));
+        categoryDao.save(new Category(new Long(2),"Spring"));
+        categoryDao.save(new Category(new Long(3),"JSF"));
     }
 }
