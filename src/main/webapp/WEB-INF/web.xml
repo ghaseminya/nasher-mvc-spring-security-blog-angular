@@ -81,5 +81,11 @@
 		<servlet-name>data</servlet-name>
 		<url-pattern>/data/*</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<description>some useful tools!</description>
+		<servlet-name>tools</servlet-name>
+		<servlet-class>ir.mnm.nasher.util.tools</servlet-class>
+	</servlet>
+
 
 </web-app>

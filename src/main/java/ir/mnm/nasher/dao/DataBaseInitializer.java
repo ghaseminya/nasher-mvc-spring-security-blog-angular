@@ -52,7 +52,7 @@ public class DataBaseInitializer
         this.userDao.save(adminUser);
 
         long timestamp = System.currentTimeMillis() - (1000 * 60 * 60 * 24);
-        for (int i = 0; i < 20; i++) {
+        for (int i = 1; i < 8; i++) {
             BlogPost blogPost = new BlogPost();
             blogPost.setContent("This is example content " + i);
             blogPost.setDate(new Date(timestamp));

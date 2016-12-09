@@ -80,11 +80,15 @@
                 <h2>
                     <a href="#"> ${categlists.get(entry.getCategory()-1).getName()}/Blog Post Title ${entry.getTitle()}</a>
                 </h2>
-                <img src="${pageContext.request.contextPath}/data/${entry.getFile()}"/>
+                <img style="width:400px" src="${pageContext.request.contextPath}/data/${entry.getFile()}"/>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on ${entry.getDate()}</p>
                 <hr>
                 <p>${entry.getContent()}</p>
-
+                <ul>
+                <c:forEach items="${tools.tag(entry.getTag())}" var="t">
+                <li><a href="#">t</a></li>
+                </c:forEach>
+                </ul>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                 <hr>
