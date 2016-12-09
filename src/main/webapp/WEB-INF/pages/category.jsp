@@ -50,7 +50,7 @@
 
                     <c:forEach items="${categlists}" var="entry">
                     <li>
-                                            <a href="${entry.getId()}.html">${entry.name}</a>
+                                            <a href="${entry.getTitle()}/${entry.getId()}.html">${entry.name}</a>
                     </li>
                     </c:forEach>
 
@@ -85,14 +85,12 @@
                 <p><span class="glyphicon glyphicon-time"></span> Posted on ${entry.getDate()}</p>
                 <hr>
                 <p>${entry.getContent()}</p>
-                Tags:${entry.getTags()}
-                <br/>
-                size:<%=tool.tag("${entry.getTags()}")%>
-                <ul>
+                Tags:
+
                 <c:forEach items="${tools.tag(entry.getTags())}" var="t">
-                <li><a href="#">${t}</a></li>
+                <a href="#">${t}</a>
                 </c:forEach>
-                </ul>
+
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                 <hr>

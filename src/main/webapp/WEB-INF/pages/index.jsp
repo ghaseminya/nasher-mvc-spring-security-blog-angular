@@ -49,7 +49,7 @@
 
                     <c:forEach items="${categlists}" var="entry">
                     <li>
-                                            <a href="category/home/${entry.getId()}.html">${entry.name}</a>
+                                            <a href="category/${entry.getTitle()}/${entry.getId()}.html">${entry.name}</a>
                     </li>
                     </c:forEach>
 

@@ -13,33 +13,29 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 /**
- * Created by mghasemy on 12/9/16.
+ * Created by mghasemy on 12/10/16.
  */
 @Controller
-public class categoryController {
+public class oneController {
     private BlogPostDao blogPostDao;
     private CategoryDao categoryDao;
 
-    public categoryController(BlogPostDao blogPostDao, CategoryDao cd) {
+    public oneController(BlogPostDao blogPostDao, CategoryDao cd) {
         this.blogPostDao = blogPostDao;
         this.categoryDao = cd;
     }
-    @RequestMapping(value = "category/{title}/{categid}", method = RequestMethod.GET)
-    public ModelAndView listblogbycateg(@PathVariable int categid){
-        System.out.println(categid);
-
-        List<BlogPost> allEntries=null;
+    @RequestMapping(value = "one/{title}/{oneid}", method = RequestMethod.GET)
+    public ModelAndView listblogbycateg(@PathVariable Long oneid){
+        BlogPost post=null;
         List<Category> allcateg=null;
         if(null!=blogPostDao)
-            allEntries= blogPostDao.blogbycateg(categid);
+            post= blogPostDao.find(oneid);
         if(null!=categoryDao)
             allcateg=categoryDao.findAll();
-        //return back to index.jsp
-        ModelAndView model = new ModelAndView("category");
+        ModelAndView model = new ModelAndView("one");
         model.addObject("categlists", allcateg);
-        model.addObject("bloglists", allEntries);
+        model.addObject("post", post);
         model.addObject("tools", new ir.mnm.nasher.util.tools());
         return model;
-
     }
 }
