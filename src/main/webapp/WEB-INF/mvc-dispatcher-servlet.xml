@@ -6,13 +6,13 @@
 <!--
 	Beans for controlling...
 	-->
-<bean name="/index.html"
+<bean name="/index"
       class="ir.mnm.nasher.web.controller.blogs" >
     <constructor-arg ref="blogPostDao"/>
     <constructor-arg ref="categotyDao"/>
 </bean>
 
-    <bean name="/category/home.html"
+    <bean name="/category/home"
           class="ir.mnm.nasher.web.controller.categoryController" >
         <constructor-arg ref="blogPostDao"/>
         <constructor-arg ref="categotyDao"/>
