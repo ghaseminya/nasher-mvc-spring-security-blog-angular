@@ -56,6 +56,9 @@
 
 	<bean id="blogPostDao" class="ir.mnm.nasher.dao.blogpost.JpaBlogPostDao">
 	</bean>
+
+	<bean id="categotyDao" class="ir.mnm.nasher.dao.category.JpaCategoryDao">
+	</bean>
 	
 	<bean id="userDao" class="ir.mnm.nasher.dao.user.JpaUserDao">
 	</bean>
@@ -73,6 +76,8 @@
 		<constructor-arg ref="userDao" />
 		<constructor-arg ref="blogPostDao"/>
 		<constructor-arg ref="passwordEncoder" />
+		<constructor-arg ref="categotyDao" />
+
 	</bean>
 
 	<!--
