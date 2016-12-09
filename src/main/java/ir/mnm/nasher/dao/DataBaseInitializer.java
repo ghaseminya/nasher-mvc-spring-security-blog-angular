@@ -56,7 +56,8 @@ public class DataBaseInitializer
             BlogPost blogPost = new BlogPost();
             blogPost.setContent("This is example content " + i);
             blogPost.setDate(new Date(timestamp));
-            blogPost.setCategory(new Random().nextInt(2)+1);
+            int c=new Random().nextInt(3)+1;
+            blogPost.setCategory(c);
             blogPost.setSign(1);
             blogPost.setTitle("Blog title "+i);
             this.blogPostDao.save(blogPost);
