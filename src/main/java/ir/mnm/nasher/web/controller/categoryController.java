@@ -24,10 +24,10 @@ public class categoryController {
         this.blogPostDao = blogPostDao;
         this.categoryDao = cd;
     }
-    @RequestMapping(value = "category/home/{foo}", method = RequestMethod.GET)
-    public ModelAndView listblogbycateg(@PathVariable String foo){
-        System.out.println(foo);
-        int categid=1;
+    @RequestMapping(value = "category/home/{categid}", method = RequestMethod.GET)
+    public ModelAndView listblogbycateg(@PathVariable int categid){
+        System.out.println(categid);
+
         List<BlogPost> allEntries=null;
         List<Category> allcateg=null;
         if(null!=blogPostDao)
