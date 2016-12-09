@@ -34,7 +34,7 @@ public class blogs {
         if(null!=blogPostDao)
             allEntries= blogPostDao.findAll();
         if(null!=categoryDao)
-            allcateg=categoryDao.getall();
+            allcateg=categoryDao.findAll();
         //return back to index.jsp
         ModelAndView model = new ModelAndView("index");
         model.addObject("categlists", allcateg);

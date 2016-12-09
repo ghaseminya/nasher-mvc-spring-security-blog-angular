@@ -22,7 +22,7 @@ public class JpaCategoryDao extends JpaDao<Category,Long> implements CategoryDao
 
     @Override
     @Transactional(readOnly = true)
-    public List<Category> getall(){
+    public List<Category> findAll(){
         final CriteriaBuilder builder = this.getEntityManager().getCriteriaBuilder();
         final CriteriaQuery<Category> criteriaQuery = builder.createQuery(Category.class);
 
