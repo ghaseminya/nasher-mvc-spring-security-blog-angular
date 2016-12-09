@@ -44,19 +44,5 @@ public class blogs {
 
     }
 
-    @RequestMapping(value = "/category/{categid}", method = RequestMethod.GET)
-    public ModelAndView listblogbycateg(@PathVariable int categid){
-        List<BlogPost> allEntries=null;
-        List<Category> allcateg=null;
-        if(null!=blogPostDao)
-            allEntries= blogPostDao.blogbycateg(categid);
-        if(null!=categoryDao)
-            allcateg=categoryDao.findAll();
-        //return back to index.jsp
-        ModelAndView model = new ModelAndView("category");
-        model.addObject("categlists", allcateg);
-        model.addObject("bloglists", allEntries);
-        return model;
 
-    }
 }

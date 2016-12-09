@@ -12,6 +12,12 @@
     <constructor-arg ref="categotyDao"/>
 </bean>
 
+    <bean name="/category.html"
+          class="ir.mnm.nasher.web.controller.categoryController" >
+        <constructor-arg ref="blogPostDao"/>
+        <constructor-arg ref="categotyDao"/>
+    </bean>
+
 <bean id="viewResolver"
       class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
 <property name="prefix">
