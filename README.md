@@ -9,8 +9,11 @@ Nasher is a light Java blogging system
 
 Admin panel + Home pages
 
-[Demo](http://jnasher.ir)
-[Admin Demo](http://admin.jnasher.ir) username/password=mnm
+[Demo](http://jnasher.ir) => http://jnasher.ir
+
+[Admin Demo](http://admin.jnasher.ir) =>  http://admin.jnasher.ir 
+
+username/password=mnm
 
 About
 -----
