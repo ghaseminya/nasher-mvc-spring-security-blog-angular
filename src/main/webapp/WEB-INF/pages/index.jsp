@@ -55,6 +55,9 @@
 
 
                 </ul>
+                <ul class="nav navbar-nav pull-right">
+                <li><a href="signup.html">Sign Up</a></li>
+                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>

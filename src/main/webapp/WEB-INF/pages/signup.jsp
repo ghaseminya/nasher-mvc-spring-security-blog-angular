@@ -100,7 +100,7 @@
 
                                     <div class="col-sm-12 controls">
                                       <a id="btn-login" href="#" class="btn btn-success">Login  </a>
-                                      <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>
+                                      <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Github!</a>
 
                                     </div>
                                 </div>
@@ -199,4 +199,9 @@
 
          </div>
     </div>
+    <!-- jQuery -->
+        <script src="<%=request.getContextPath()%>/res/js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="<%=request.getContextPath()%>/res/js/bootstrap.min.js"></script>
 </body>

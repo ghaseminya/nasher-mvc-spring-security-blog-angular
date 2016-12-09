@@ -32,6 +32,12 @@ Technologies
 * [Spring Security](http://projects.spring.io/spring-security/)
 * [Hibernate](http://hibernate.org/)
 
+User Levels
+------------
+* User Level = {View posts, Apply new Comment}
+* Editor Level = {Add new Post,Edit posts,Delete posts}
+* Admin Level = {Manage Users, Posts, Comments, Files, Categories}
+
 Running
 -------
 
