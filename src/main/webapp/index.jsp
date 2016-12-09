@@ -69,9 +69,9 @@
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">
-                ids of all blogs:bloglist
-                <c:forEach items="${bloglist.findAll()}" var="entry">
-                blog id is:${entry.getId()}
+                ids of all blogs:bloglist${lists2}
+                <c:forEach items="${lists}" var="entry">
+                blog id is:${entry}
                 </c:forEach>
                 <h1 class="page-header">
                     Page Heading

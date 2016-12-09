@@ -51,7 +51,7 @@ angular.module('exampleApp', ['ngRoute', 'ngCookies', 'exampleApp.services'])
 		    $httpProvider.interceptors.push(function ($q, $rootScope, $location) {
 		        return {
 		        	'request': function(config) {
-		        		var isRestCall = config.url.indexOf('rest') == 0;
+		        		var isRestCall = config.url.indexOf('/rest') == 0;
 		        		if (isRestCall && angular.isDefined($rootScope.accessToken)) {
 		        			var accessToken = $rootScope.accessToken;
 		        			if (exampleAppConfig.useAccessTokenHeader) {
