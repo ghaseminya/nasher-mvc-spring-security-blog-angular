@@ -52,7 +52,7 @@
 
 	<servlet-mapping>
 		<servlet-name>mvc-dispatcher</servlet-name>
-		<url-pattern>/pages/*</url-pattern>
+		<url-pattern>/pages</url-pattern>
 	</servlet-mapping>
 	<!--
 		Apply Spring Security Filter to all Requests 
