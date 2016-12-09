@@ -50,7 +50,7 @@
 
                     <c:forEach items="${categlists}" var="entry">
                     <li>
-                                            <a href="${entry.getName()}/${entry.getId()}.html">${entry.name}</a>
+                                            <a href="${tools.utitle(entry.getName())}/${entry.getId()}.html">${entry.name}</a>
                     </li>
                     </c:forEach>
 
@@ -79,7 +79,7 @@
 
                 <!-- First Blog Post -->
                 <h2>
-                    <a href="<%=request.getContextPath()%>/one/${entry.getTitle()}/${entry.getId()}.html"> ${categlists.get(entry.getCategory()-1).getName()}/Blog Post Title ${entry.getTitle()}</a>
+                    <a href="<%=request.getContextPath()%>/one/${tools.utitle(entry.getTitle())}/${entry.getId()}.html"> ${categlists.get(entry.getCategory()-1).getName()}/Blog Post Title ${entry.getTitle()}</a>
                 </h2>
                 <img style="width:400px" src="${pageContext.request.contextPath}/data/${entry.getFile()}"/>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on ${entry.getDate()}</p>
