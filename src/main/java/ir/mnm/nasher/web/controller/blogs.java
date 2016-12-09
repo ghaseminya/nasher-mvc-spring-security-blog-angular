@@ -21,11 +21,11 @@ public class blogs {
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public ModelAndView listblog(){
 
-        List<BlogPost> allEntries = this.blogPostDao.findAll();
+        //List<BlogPost> allEntries = this.blogPostDao.findAll();
         //return back to index.jsp
         ModelAndView model = new ModelAndView("index");
         model.addObject("lists2", "asdasd");
-        model.addObject("lists", allEntries);
+        model.addObject("lists", null);
         return model;
 
     }
