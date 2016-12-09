@@ -89,7 +89,7 @@ public class BlogPost implements Entity
     }
 
     public void setCategory(int category) {
-        this.category = categoty;
+        this.category = category;
     }
 
     public BlogPost()
