@@ -15,17 +15,18 @@ import java.util.List;
  */
 @Controller
 public class blogs {
+
     @Autowired
     private BlogPostDao blogPostDao;
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public ModelAndView listblog(){
 
-        //List<BlogPost> allEntries = this.blogPostDao.findAll();
+        List<BlogPost> allEntries = blogPostDao.findAll();
         //return back to index.jsp
         ModelAndView model = new ModelAndView("index");
-        model.addObject("lists2", "asdasd");
-        model.addObject("lists", null);
+        model.addObject("lists2", "NUmber="+allEntries.size());
+        model.addObject("lists", allEntries);
         return model;
 
     }

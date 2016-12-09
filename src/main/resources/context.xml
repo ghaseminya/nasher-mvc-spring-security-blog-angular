@@ -55,6 +55,7 @@
 	</bean>
 
 	<bean id="blogPostDao" class="ir.mnm.nasher.dao.blogpost.JpaBlogPostDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	
 	<bean id="userDao" class="ir.mnm.nasher.dao.user.JpaUserDao">
