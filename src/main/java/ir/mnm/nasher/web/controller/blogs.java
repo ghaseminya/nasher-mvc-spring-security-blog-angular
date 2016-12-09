@@ -40,6 +40,7 @@ public class blogs {
         ModelAndView model = new ModelAndView("index");
         model.addObject("categlists", allcateg);
         model.addObject("bloglists", allEntries);
+        model.addObject("tools", new ir.mnm.nasher.util.tools());
         return model;
 
     }
