@@ -117,7 +117,7 @@
 	<!--
 	Beans for controlling...
 	-->
-	<bean name="/index"
+	<bean name="/index.nasher"
 		  class="ir.mnm.nasher.web.controller.blogs" />
 
 	<bean id="viewResolver"
