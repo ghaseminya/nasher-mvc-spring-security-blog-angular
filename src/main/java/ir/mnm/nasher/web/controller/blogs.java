@@ -18,7 +18,7 @@ public class blogs {
     @Autowired
     private BlogPostDao blogPostDao;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     public ModelAndView listblog(){
 
         List<BlogPost> allEntries = this.blogPostDao.findAll();
