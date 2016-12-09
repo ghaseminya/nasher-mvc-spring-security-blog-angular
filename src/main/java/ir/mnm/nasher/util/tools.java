@@ -7,6 +7,9 @@ import java.util.List;
  * Created by mghasemy on 12/9/16.
  */
 public class tools {
+    public String utitle(String in){
+        return in.replaceAll(" ", "-");
+    }
     public List<String> tag(String in){
         if(in==null){
             return null;

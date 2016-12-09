@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,7 +49,7 @@
                 <ul class="nav navbar-nav">
                     <c:forEach items="${categlists}" var="entry">
                                         <li>
-                      <a href="category/${entry.getTitle()}/${entry.getId()}.html">${entry.name}</a>
+                      <a href="category/${tools.utitle(entry.getName())}/${entry.getId()}.html">${entry.name}</a>
                                      </li>
                       </c:forEach>
                 </ul>
