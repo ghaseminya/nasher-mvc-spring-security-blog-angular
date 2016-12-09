@@ -25,7 +25,8 @@ public class categoryController {
         this.categoryDao = cd;
     }
     @RequestMapping(value = "category/home", method = RequestMethod.GET)
-    public ModelAndView listblogbycateg(@PathVariable int categid){
+    public ModelAndView listblogbycateg(){
+        int categid=1;
         List<BlogPost> allEntries=null;
         List<Category> allcateg=null;
         if(null!=blogPostDao)
