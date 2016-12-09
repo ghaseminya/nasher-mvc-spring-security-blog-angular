@@ -16,7 +16,6 @@ import java.util.List;
  * Created by mghasemy on 12/9/16.
  */
 @Controller
-@RequestMapping("/category/*")
 public class categoryController {
     private BlogPostDao blogPostDao;
     private CategoryDao categoryDao;
@@ -25,7 +24,7 @@ public class categoryController {
         this.blogPostDao = blogPostDao;
         this.categoryDao = cd;
     }
-    @RequestMapping(value = "home/{categid}", method = RequestMethod.GET)
+    @RequestMapping(value = "category/home", method = RequestMethod.GET)
     public ModelAndView listblogbycateg(@PathVariable int categid){
         List<BlogPost> allEntries=null;
         List<Category> allcateg=null;
@@ -34,7 +33,7 @@ public class categoryController {
         if(null!=categoryDao)
             allcateg=categoryDao.findAll();
         //return back to index.jsp
-        ModelAndView model = new ModelAndView("category");
+        ModelAndView model = new ModelAndView("home");
         model.addObject("categlists", allcateg);
         model.addObject("bloglists", allEntries);
         return model;
