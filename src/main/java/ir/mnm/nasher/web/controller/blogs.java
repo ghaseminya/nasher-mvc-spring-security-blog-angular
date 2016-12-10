@@ -28,7 +28,7 @@ public class blogs {
         this.categoryDao = cd;
     }
 
-    @RequestMapping(value = "/index2", method = RequestMethod.GET)
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     public ModelAndView listblog(){
         List<BlogPost> allEntries=null;
         List<Category> allcateg=null;
