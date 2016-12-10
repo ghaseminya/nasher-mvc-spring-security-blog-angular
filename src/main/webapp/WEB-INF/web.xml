@@ -50,10 +50,7 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
-	<servlet-mapping>
-		<servlet-name>mvc-dispatcher</servlet-name>
-		<url-pattern>*.html</url-pattern>
-	</servlet-mapping>
+
 	<!--
 		Apply Spring Security Filter to all Requests 
 	 -->
