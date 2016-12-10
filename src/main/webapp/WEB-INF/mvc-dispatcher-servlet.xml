@@ -26,10 +26,5 @@
           class="ir.mnm.nasher.web.controller.signController" >
     </bean>
 
-<bean id="viewResolver"
-      class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
-<property name="suffix">
-    <value>.jsp</value>
-</property>
-</bean>
+
 </beans>
