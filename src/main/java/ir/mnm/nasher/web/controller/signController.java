@@ -1,5 +1,7 @@
 package ir.mnm.nasher.web.controller;
 
+import ir.mnm.nasher.dao.blogpost.BlogPostDao;
+import ir.mnm.nasher.dao.category.CategoryDao;
 import ir.mnm.nasher.entity.BlogPost;
 import ir.mnm.nasher.entity.Category;
 import org.springframework.stereotype.Controller;
@@ -15,6 +17,13 @@ import java.util.List;
  */
 @Controller
 public class signController {
+    private BlogPostDao blogPostDao;
+    private CategoryDao categoryDao;
+
+    public signController(BlogPostDao blogPostDao, CategoryDao cd) {
+        this.blogPostDao = blogPostDao;
+        this.categoryDao = cd;
+    }
     @RequestMapping(value = "signup", method = RequestMethod.GET)
     public ModelAndView register(){
         ModelAndView model = new ModelAndView("signup");
