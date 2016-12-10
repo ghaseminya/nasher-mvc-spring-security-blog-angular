@@ -6,7 +6,7 @@
 <!--
 	Beans for controlling...
 	-->
-<bean name="index.do"
+<bean name="index"
       class="ir.mnm.nasher.web.controller.blogs" >
     <constructor-arg ref="blogPostDao"/>
     <constructor-arg ref="categotyDao"/>
@@ -17,8 +17,13 @@
         <constructor-arg ref="blogPostDao"/>
         <constructor-arg ref="categotyDao"/>
     </bean>
-    <bean name="/one.jsp"
+    <bean name="one"
           class="ir.mnm.nasher.web.controller.oneController" >
+        <constructor-arg ref="blogPostDao"/>
+        <constructor-arg ref="categotyDao"/>
+    </bean>
+    <bean name="signup"
+          class="ir.mnm.nasher.web.controller.signController" >
         <constructor-arg ref="blogPostDao"/>
         <constructor-arg ref="categotyDao"/>
     </bean>
