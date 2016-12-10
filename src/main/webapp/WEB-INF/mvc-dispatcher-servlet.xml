@@ -6,7 +6,7 @@
 <!--
 	Beans for controlling...
 	-->
-<bean name="/iindex"
+<bean name="/miindex"
       class="ir.mnm.nasher.web.controller.blogs" >
     <constructor-arg ref="blogPostDao"/>
     <constructor-arg ref="categotyDao"/>
@@ -22,9 +22,7 @@
         <constructor-arg ref="blogPostDao"/>
         <constructor-arg ref="categotyDao"/>
     </bean>
-    <bean name="/signup.html"
-          class="ir.mnm.nasher.web.controller.signController" >
-    </bean>
+
 
 <bean id="viewResolver"
       class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
