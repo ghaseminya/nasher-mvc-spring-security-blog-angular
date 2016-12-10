@@ -60,6 +60,28 @@
         </div>
         <!-- /.container -->
     </nav>
+    		<form name='loginForm'
+    		  action="<c:url value='j_spring_security_check' />" method='POST'>
+
+    		  <table>
+    			<tr>
+    				<td>User:</td>
+    				<td><input type='text' name='username' value=''></td>
+    			</tr>
+    			<tr>
+    				<td>Password:</td>
+    				<td><input type='password' name='password' /></td>
+    			</tr>
+    			<tr>
+    				<td colspan='2'><input name="submit" type="submit"
+    					value="submit" /></td>
+    			</tr>
+    		  </table>
+
+    		  <input type="hidden" name="${_csrf.parameterName}"
+    			value="${_csrf.token}" />
+
+    		</form>
     <div class="container">
         <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
             <div class="panel panel-info" >
@@ -72,7 +94,7 @@
 
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 
-                        <form id="loginform" class="form-horizontal" role="form" action="<c:url value='j_spring_security_check'/>" >
+                        <form method="POST" action="<c:url value='j_spring_security_check'/>" >
                             <c:if test="${error == true}">
                             	<b class="error">Invalid login or password.</b>
                             </c:if>

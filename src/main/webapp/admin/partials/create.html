@@ -4,6 +4,13 @@
 
 <form class="form-horizontal">
 	<div class="form-group">
+		<label class="control-label col-sm-2" for="content">Title</label>
+		<div class="col-sm-10">
+			<input ng-model="blogPost.title" id="title" class="form-control"
+					  rows="10">{{blogPost.title}}</inpu>
+		</div>
+	</div>
+	<div class="form-group">
 		<label class="control-label col-sm-2" for="content">Content</label>
 		<div class="col-sm-10">
 			<textarea ng-model="blogPost.content" id="content" class="form-control"
