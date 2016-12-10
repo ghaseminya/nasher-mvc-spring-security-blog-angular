@@ -12,12 +12,12 @@
     <constructor-arg ref="categotyDao"/>
 </bean>
 
-    <bean name="/category.html"
+    <bean name="category"
           class="ir.mnm.nasher.web.controller.categoryController" >
         <constructor-arg ref="blogPostDao"/>
         <constructor-arg ref="categotyDao"/>
     </bean>
-    <bean name="/one.html"
+    <bean name="/one.jsp"
           class="ir.mnm.nasher.web.controller.oneController" >
         <constructor-arg ref="blogPostDao"/>
         <constructor-arg ref="categotyDao"/>
