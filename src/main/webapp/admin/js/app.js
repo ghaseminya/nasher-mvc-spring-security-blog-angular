@@ -111,10 +111,10 @@ angular.module('exampleApp', ['ngRoute', 'ngCookies', 'exampleApp.services'])
 	});
 
 
-function IndexController($scope, BlogPostService) {
+function IndexController($scope, BlogPostService, CategoryService) {
 
 	$scope.blogPosts = BlogPostService.query();
-
+    $scope.category = CategoryService.query();
 	$scope.deletePost = function (blogPost) {
 		blogPost.$remove(function () {
 			$scope.blogPosts = BlogPostService.query();
@@ -135,10 +135,10 @@ function EditController($scope, $routeParams, $location, BlogPostService) {
 }
 
 
-function CreateController($scope, $location, BlogPostService) {
+function CreateController($scope, $location, BlogPostService, CategoryService) {
 
 	$scope.blogPost = new BlogPostService();
-	
+	$scope.category = CategoryService.query();
 	$scope.save = function() {
 		$scope.blogPost.$save(function () {
 			$location.path('/');
