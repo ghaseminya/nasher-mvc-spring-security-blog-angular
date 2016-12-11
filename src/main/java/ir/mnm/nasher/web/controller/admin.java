@@ -18,7 +18,7 @@ public class admin {
     @RequestMapping(value="/upload.do", method= RequestMethod.POST)
     public String handleFileUpload(@RequestParam("file") MultipartFile file){
         String name="asdf";
-        if (!file.isEmpty()) {
+        /*if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
                 BufferedOutputStream stream =
@@ -31,6 +31,8 @@ public class admin {
             }
         } else {
             return "You failed to upload " + name + " because the file was empty.";
-        }
+        }*/
+        System.out.println("!!!!!!!!!!!!!!!!!");
+        return "asd";
     }
 }
