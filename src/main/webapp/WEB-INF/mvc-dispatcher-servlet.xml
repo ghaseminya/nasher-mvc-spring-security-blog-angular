@@ -30,10 +30,11 @@
     <bean name="upload.do"
           class="ir.mnm.nasher.web.controller.admin" >
         </bean>
-    <bean id="multipartResolver" class="**org.springframework.web.multipart.commons.CommonsMultipartResolver**" />
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
+    </bean>
 
-
-    <bean id="viewResolver"
+<bean id="viewResolver"
       class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
 <property name="prefix">
     <value>/pages/</value>
