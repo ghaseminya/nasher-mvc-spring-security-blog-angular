@@ -32,7 +32,7 @@
         </bean>
     <bean id="multipartResolver"
           class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
-        <property name="maxUploadSize" value="99971520" />
+
     </bean>
 
 <bean id="viewResolver"
