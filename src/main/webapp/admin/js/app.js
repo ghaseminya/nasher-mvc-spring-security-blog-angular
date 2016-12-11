@@ -187,43 +187,7 @@ services.factory('BlogPostService', function ($resource) {
 	return $resource('/rest/blogposts/:id', {id: '@id'});
 });
 
+services.factory('CategoryService', function ($resource) {
 
-
-
-var myApp = angular.module('myApp', []);
-
-        myApp.directive('fileModel', ['$parse', function ($parse) {
-            return {
-                restrict: 'A',
-                link: function(scope, element, attrs) {
-                    var model = $parse(attrs.fileModel);
-                    var modelSetter = model.assign;
-
-                    element.bind('change', function(){
-                        scope.$apply(function(){
-                            modelSetter(scope, element[0].files[0]);
-                        });
-                    });
-                }
-            };
-        }]);
-        myApp.controller('myCtrl', ['$scope', '$http', function($scope, $http){
-
-            $scope.uploadFile = function(){
-                var file = $scope.myFile;
-                var fd = new FormData();
-                fd.append('file', file);
-    //We can send anything in name parameter,
-//it is hard coded to abc as it is irrelavant in this case.
-                var uploadUrl = "/upload?name=abc";
-                $http.post(uploadUrl, fd, {
-                    transformRequest: angular.identity,
-                    headers: {'Content-Type': undefined}
-                })
-                .success(function(){
-                })
-                .error(function(){
-                });
-            }
-
-        }]);
+	return $resource('/rest/category/:id', {id: '@id'});
+});
