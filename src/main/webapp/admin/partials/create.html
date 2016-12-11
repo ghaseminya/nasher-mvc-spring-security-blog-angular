@@ -27,7 +27,7 @@
 	<div class="form-group">
 		<label class="control-label col-sm-2" for="tags">Image</label>
 		<div class="col-sm-10">
-			<input type="file" file-model="myFile" />
+			<input type="file" name="file" ng-model="document.fileInput" id="file" onchange="angular.element(this).scope().setTitle(this)" />
 			<button ng-click="uploadFile()">upload me</button>
 		</div>
 	</div>

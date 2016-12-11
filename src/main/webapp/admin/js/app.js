@@ -145,20 +145,18 @@ function CreateController($scope, $location, BlogPostService, CategoryService) {
 		});
 	};
 	 $scope.uploadFile = function(){
-                    var file = $scope.myFile;
-                    var fd = new FormData();
-                    fd.append('file', file);
-        //We can send anything in name parameter,
-    //it is hard coded to abc as it is irrelavant in this case.
-                    var uploadUrl = "/upload?name=abc";
-                    $http.post(uploadUrl, fd, {
-                        transformRequest: angular.identity,
-                        headers: {'Content-Type': undefined}
-                    })
-                    .success(function(){
-                    })
-                    .error(function(){
-                    });
+                  var formData=new FormData();
+                      formData.append("file",file.files[0]);
+                      $http.post('/rest/uploadfile/newDocument', formData, {
+                          transformRequest: function(data, headersGetterFunction) {
+                              return data;
+                          },
+                          headers: { 'Content-Type': undefined }
+                          }).success(function(data, status) {
+                              alert("Success ... " + status);
+                          }).error(function(data, status) {
+                              alert("Error ... " + status);
+                          });
                 };
 };
 
