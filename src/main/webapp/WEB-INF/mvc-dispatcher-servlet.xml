@@ -30,6 +30,10 @@
     <bean name="upload.do"
           class="ir.mnm.nasher.web.controller.admin" >
         </bean>
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
+        <property name="maxUploadSize" value="99971520" />
+    </bean>
 
 <bean id="viewResolver"
       class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
