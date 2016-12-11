@@ -82,6 +82,13 @@
 		<url-pattern>/data/*</url-pattern>
 	</servlet-mapping>
 
-
+	<servlet>
+		<servlet-name>file_upload</servlet-name>
+		<servlet-class>ir.mnm.nasher.web.controller.FileUpload</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>file_upload</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
 
 </web-app>
