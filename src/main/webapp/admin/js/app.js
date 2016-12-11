@@ -144,6 +144,22 @@ function CreateController($scope, $location, BlogPostService, CategoryService) {
 			$location.path('/');
 		});
 	};
+	 $scope.uploadFile = function(){
+                    var file = $scope.myFile;
+                    var fd = new FormData();
+                    fd.append('file', file);
+        //We can send anything in name parameter,
+    //it is hard coded to abc as it is irrelavant in this case.
+                    var uploadUrl = "/upload?name=abc";
+                    $http.post(uploadUrl, fd, {
+                        transformRequest: angular.identity,
+                        headers: {'Content-Type': undefined}
+                    })
+                    .success(function(){
+                    })
+                    .error(function(){
+                    });
+                };
 };
 
 
@@ -191,3 +207,4 @@ services.factory('CategoryService', function ($resource) {
 
 	return $resource('/rest/category/:id', {id: '@id'});
 });
+
