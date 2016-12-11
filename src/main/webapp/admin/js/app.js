@@ -145,18 +145,17 @@ function CreateController($scope, $location, BlogPostService, CategoryService,$h
 		});
 	};
 	 $scope.uploadFile = function(){
-                  var formData=new FormData();
-                      formData.append("file",file.files[0]);
-                      $http.post('/upload.do', formData, {
-                          transformRequest: function(data, headersGetterFunction) {
-                              return data;
-                          },
-                          headers: { 'Content-Type': undefined }
-                          }).success(function(data, status) {
-                              alert("Success ... " + status);
-                          }).error(function(data, status) {
-                              alert("Error ... " + status);
-                          });
+                  var fd=new FormData();
+                      fd.append("files",$scope.myFile );
+                      $http.post("/upload.do", fd, {
+                      			transformRequest : angular.identity,
+                      			headers : {
+                      				'Content-Type' : undefined
+                      			}
+                      		}).success(function() {
+                      			ArchiveService.search(null, null);
+                      		}).error(function() {
+                      		});
                 };
 };
 
