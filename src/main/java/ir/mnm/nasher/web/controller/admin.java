@@ -15,9 +15,9 @@ import java.io.FileOutputStream;
  */
 @Controller
 public class admin {
-    @RequestMapping(value="/upload", method= RequestMethod.POST)
-    public String handleFileUpload(@RequestParam("name") String name,
-                                   @RequestParam("file") MultipartFile file){
+    @RequestMapping(value="/upload.do", method= RequestMethod.POST)
+    public String handleFileUpload(@RequestParam("file") MultipartFile file){
+        String name="asdf";
         if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();

@@ -27,6 +27,9 @@
         <constructor-arg ref="blogPostDao"/>
         <constructor-arg ref="categotyDao"/>
     </bean>
+    <bean name="upload.do"
+          class="ir.mnm.nasher.web.controller.admin" >
+        </bean>
 
 
 <bean id="viewResolver"

@@ -135,7 +135,7 @@ function EditController($scope, $routeParams, $location, BlogPostService) {
 }
 
 
-function CreateController($scope, $location, BlogPostService, CategoryService) {
+function CreateController($scope, $location, BlogPostService, CategoryService,$http) {
 
 	$scope.blogPost = new BlogPostService();
 	$scope.category = CategoryService.query();
@@ -147,7 +147,7 @@ function CreateController($scope, $location, BlogPostService, CategoryService) {
 	 $scope.uploadFile = function(){
                   var formData=new FormData();
                       formData.append("file",file.files[0]);
-                      $http.post('/rest/uploadfile/newDocument', formData, {
+                      $http.post('/upload.do', formData, {
                           transformRequest: function(data, headersGetterFunction) {
                               return data;
                           },
