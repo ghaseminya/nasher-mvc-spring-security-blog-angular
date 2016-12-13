@@ -201,7 +201,7 @@ function LoginController($scope, $rootScope, $location, $cookieStore, UserServic
 			}
 			UserService.get(function(user) {
 				$rootScope.user = user;
-				$location.path("/");
+				$location.path("/index");
 			});
 		});
 	};
