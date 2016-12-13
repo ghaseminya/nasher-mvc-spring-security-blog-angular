@@ -1,49 +1,15 @@
 <div class="page-header">
-	<h3>Edit</h3>
+	<h3>Edit Category</h3>
 </div>
 
 <form class="form-horizontal">
 	<div class="form-group">
-		<label class="control-label col-sm-2" for="content">Title</label>
+		<label class="control-label col-sm-2" for="name">Name</label>
 		<div class="col-sm-10">
-			<input ng-model="blogPost.title" id="title" class="form-control" value="{{blogPost.title}}"></input>
+			<input ng-model="categ.name" id="name" class="form-control" value="{{categ.name}}"></input>
 		</div>
 	</div>
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="category">Category</label>
-		<div class="col-sm-10">
-			<input ng-model="blogPost.category" id="category" class="form-control" value="{{blogPost.category}}">
-			</input>
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="tags">Tags</label>
-		<div class="col-sm-10">
-			<input ng-model="blogPost.tags" id="tags" class="form-control" value="{{blogPost.tags}}">
-			</input>
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="file">Image</label>
-		<div class="col-sm-10">
-			<input ng-model="blogPost.file" id="file" class="form-control" value="{{blogPost.file}}" >
-			</input>
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="summary">Summary</label>
-		<div class="col-sm-10">
-			<textarea ng-model="blogPost.summary" id="summary" class="form-control"
-					  rows="5">{{blogPost.summary}}</textarea>
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="content">Content</label>
-		<div class="col-sm-10">
-			<textarea ng-model="blogPost.content" id="content" class="form-control"
-					  rows="10">{{blogPost.content}}</textarea>
-		</div>
-	</div>
+
 	<div class="form-group">
 		<div class="col-sm-10 col-sm-offset-2">
 			<button type="submit" class="btn btn-primary" ng-click="save()"><span class="fa fa-check"></span> Save</button>

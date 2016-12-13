@@ -150,7 +150,7 @@ function EditController($scope, $routeParams, $location, BlogPostService) {
 	
 	$scope.save = function() {
 		$scope.blogPost.$save(function () {
-			$location.path('/');
+			$location.path('/index');
 		});
 	};
 }
@@ -160,7 +160,7 @@ function EditCategController($scope, $routeParams, $location, CategoryService) {
 
 	$scope.save = function() {
 		$scope.categ.$save(function () {
-			$location.path('/');
+			$location.path('/categories');
 		});
 	};
 }
@@ -172,17 +172,16 @@ function CreateController($scope, $location, BlogPostService, CategoryService,$h
 	$scope.category = CategoryService.query();
 	$scope.save = function() {
 		$scope.blogPost.$save(function () {
-			$location.path('/');
+			$location.path('/index');
 		});
 	};
 
 };
 function CreateCategController($scope, $location, CategoryService,$http) {
-
-	$scope.category = CategoryService.query();
+    $scope.categ = new CategoryService();
 	$scope.save = function() {
-		$scope.category.$save(function () {
-			$location.path('/');
+		$scope.categ.$save(function () {
+			$location.path('/categories');
 		});
 	};
 
