@@ -25,7 +25,7 @@ public class categoryController {
         this.categoryDao = cd;
     }
     @RequestMapping(value = "category/{title}/{categid}", method = RequestMethod.GET)
-    public ModelAndView listblogbycateg(@PathVariable int categid){
+    public ModelAndView listblogbycateg(@PathVariable int categid,@PathVariable String title){
         System.out.println(categid);
 
         List<BlogPost> allEntries=null;
@@ -38,6 +38,8 @@ public class categoryController {
         ModelAndView model = new ModelAndView("category");
         model.addObject("categlists", allcateg);
         model.addObject("bloglists", allEntries);
+        model.addObject("categtitle", title);
+
         model.addObject("tools", new ir.mnm.nasher.util.tools());
         return model;
 

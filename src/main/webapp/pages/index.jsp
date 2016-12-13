@@ -49,14 +49,14 @@
 
                     <c:forEach items="${categlists}" var="entry">
                     <li>
-                                            <a href="category/${tools.utitle(entry.getName())}/${entry.getId()}.html">${entry.name}</a>
+                                            <a href="category/${tools.utitle(entry.getName())}/${entry.getId()}.do">${entry.name}</a>
                     </li>
                     </c:forEach>
 
 
                 </ul>
                 <ul class="nav navbar-nav pull-right">
-                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="/admin">Admin</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -74,21 +74,24 @@
 
 
                 <h1 class="page-header">
-                    Page Heading
-                    <small>Secondary Text</small>
+                    JNasher Bloging system<br/>
+                    <small><a href="https://github.com/mmghasemi/nasher">https://github.com/mmghasemi/nasher<a></small>
                 </h1>
                 <c:forEach items="${bloglists}" var="entry">
 
                 <!-- First Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title ${entry.getId()}</a>
-                </h2>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
-                <hr>
-                <p>${entry.getContent()}</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <!-- First Blog Post -->
+                                <h2>
+                                    <a href="<%=request.getContextPath()%>/one/${tools.utitle(entry.getTitle())}/${entry.getId()}.do"> ${categlists.get(entry.getCategory()-1).getName()}/Blog Post Title ${entry.getTitle()}</a>
+                                </h2>
+                                <img style="width:400px" src="${pageContext.request.contextPath}/data/${entry.getFile()}"/>
+                                <p><span class="glyphicon glyphicon-time"></span> Posted on ${entry.getDate()}</p>
+                                <hr>
+                                <p>${entry.getContent()}</p>
 
-                <hr>
+                                <a class="btn btn-primary" href="<%=request.getContextPath()%>/one/${tools.utitle(entry.getTitle())}/${entry.getId()}.do">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+                                <hr>
                 </c:forEach>
 
 
@@ -128,7 +131,7 @@
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
                             <c:forEach items="${categlists}" var="entry">
-                                <li><a href="#">${entry.getName()}</a>
+                                <li><a href="<%=request.getContextPath()%>/category/${tools.utitle(entry.getName())}/${entry.getId()}.do">${entry.getName()}</a>
                                 </li>
                                 </c:forEach>
                             </ul>
@@ -140,11 +143,6 @@
                     <!-- /.row -->
                 </div>
 
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div>
 
             </div>
 
@@ -157,7 +155,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; JNasher 2016</p>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
