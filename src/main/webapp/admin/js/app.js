@@ -2,7 +2,16 @@ angular.module('exampleApp', ['ngRoute', 'ngCookies', 'exampleApp.services'])
 	.config(
 		[ '$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
 			
-			$routeProvider.when('/create', {
+			$routeProvider.when('/createCategory', {
+            				templateUrl: 'partials/create_categ.html',
+            				controller: CreateCategController
+            			});
+
+            			$routeProvider.when('/editCategory/:id', {
+            				templateUrl: 'partials/edit_categ.html',
+            				controller: EditCategController
+            			});
+			$routeProvider.when('/createPost', {
 				templateUrl: 'partials/create.html',
 				controller: CreateController
 			});
@@ -17,10 +26,14 @@ angular.module('exampleApp', ['ngRoute', 'ngCookies', 'exampleApp.services'])
 				controller: LoginController
 			});
 			
-			$routeProvider.otherwise({
+			$routeProvider.when('/index', {
 				templateUrl: 'partials/index.html',
 				controller: IndexController
 			});
+			$routeProvider.when('/categories', {
+            				templateUrl: 'partials/index_categ.html',
+            				controller: IndexCategController
+            			});
 			
 			$locationProvider.hashPrefix('!');
 			
@@ -121,6 +134,14 @@ function IndexController($scope, BlogPostService, CategoryService) {
 		});
 	};
 }
+function IndexCategController($scope, CategoryService) {
+    $scope.category = CategoryService.query();
+	$scope.deleteCateg = function (categ) {
+		categ.$remove(function () {
+			$scope.category = CategoryService.query();
+		});
+	};
+}
 
 
 function EditController($scope, $routeParams, $location, BlogPostService) {
@@ -129,6 +150,16 @@ function EditController($scope, $routeParams, $location, BlogPostService) {
 	
 	$scope.save = function() {
 		$scope.blogPost.$save(function () {
+			$location.path('/');
+		});
+	};
+}
+function EditCategController($scope, $routeParams, $location, CategoryService) {
+
+	$scope.categ = CategoryService.get({id: $routeParams.id});
+
+	$scope.save = function() {
+		$scope.categ.$save(function () {
 			$location.path('/');
 		});
 	};
@@ -144,19 +175,17 @@ function CreateController($scope, $location, BlogPostService, CategoryService,$h
 			$location.path('/');
 		});
 	};
-	 $scope.uploadFile = function(){
-                  var fd=new FormData();
-                      fd.append("files",$scope.myFile );
-                      $http.post("/upload.do", fd, {
-                      			transformRequest : angular.identity,
-                      			headers : {
-                      				'Content-Type' : undefined
-                      			}
-                      		}).success(function() {
-                      			ArchiveService.search(null, null);
-                      		}).error(function() {
-                      		});
-                };
+
+};
+function CreateCategController($scope, $location, CategoryService,$http) {
+
+	$scope.category = CategoryService.query();
+	$scope.save = function() {
+		$scope.category.$save(function () {
+			$location.path('/');
+		});
+	};
+
 };
 
 

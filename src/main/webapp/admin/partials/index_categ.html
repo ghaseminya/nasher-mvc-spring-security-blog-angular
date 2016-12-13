@@ -1,0 +1,20 @@
+<div class="pull-right">
+	<a href="#!/createCategory" class="btn btn-default" ng-show="hasRole('ROLE_ADMIN')" title="Create"><span class="fa fa-plus"></span></a>
+</div>
+<div class="page-header">
+	<h3>Blog Categories</h3>
+</div>
+
+<div ng-repeat="cat in category">
+	<hr />
+	<div class="pull-right">
+		<a href="" ng-click="deletePost(blogPost)" class="btn btn-xs btn-default" ng-show="hasRole('ROLE_ADMIN')"
+		   title="delete"><span class="fa fa-trash-o"></span></a>
+		<a href="#!/edit/{{blogPost.id}}" class="btn btn-xs btn-default" ng-show="hasRole('ROLE_ADMIN')"
+		   title="edit"><span class="fa fa-pencil"></span></a>
+	</div>
+	<h4>{{cat.id}}</h4>
+	<p>{{cat.name}}</p>
+
+</div>
+<hr />
