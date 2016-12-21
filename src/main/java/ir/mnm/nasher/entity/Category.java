@@ -1,5 +1,8 @@
 package ir.mnm.nasher.entity;
 
+import ir.mnm.nasher.JsonViews;
+import org.codehaus.jackson.map.annotate.JsonView;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,7 +22,7 @@ public class Category implements Entity {
     @Column
     public int parent;
 
-
+    @JsonView(JsonViews.User.class)
     public int getParent() {
         return parent;
     }
@@ -35,7 +38,7 @@ public class Category implements Entity {
         this.id = id;
         this.name = name;
     }
-
+    @JsonView(JsonViews.User.class)
     public String getName() {
         return name;
     }
@@ -44,7 +47,7 @@ public class Category implements Entity {
         this.name = name;
     }
 
-    @Override
+    @JsonView(JsonViews.Admin.class)
     public Long getId() {
         return id;
     }

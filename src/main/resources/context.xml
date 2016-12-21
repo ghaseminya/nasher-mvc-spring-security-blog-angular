@@ -111,6 +111,11 @@
 		<security:intercept-url method="PUT" pattern="/rest/blogposts/**" access="hasRole('ADMIN')"/>
 		<security:intercept-url method="POST" pattern="/rest/blogposts/**" access="hasRole('ADMIN')"/>
 		<security:intercept-url method="DELETE" pattern="/rest/blogposts/**" access="hasRole('ADMIN')"/>
+
+		<security:intercept-url method="GET" pattern="/rest/category/**" access="hasRole('USER')"/>
+		<security:intercept-url method="PUT" pattern="/rest/category/**" access="hasRole('ADMIN')"/>
+		<security:intercept-url method="POST" pattern="/rest/category/**" access="hasRole('ADMIN')"/>
+		<security:intercept-url method="DELETE" pattern="/rest/category/**" access="hasRole('ADMIN')"/>
 	</security:http>
 
 	<bean id="unauthorizedEntryPoint" class="ir.mnm.nasher.rest.UnauthorizedEntryPoint" />

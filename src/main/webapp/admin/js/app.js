@@ -6,11 +6,10 @@ angular.module('exampleApp', ['ngRoute', 'ngCookies', 'exampleApp.services'])
             				templateUrl: 'partials/create_categ.html',
             				controller: CreateCategController
             			});
-
-            			$routeProvider.when('/editCategory/:id', {
-            				templateUrl: 'partials/edit_categ.html',
-            				controller: EditCategController
-            			});
+            $routeProvider.when('/editCategory/:id', {
+                templateUrl: 'partials/edit_categ.html',
+                controller: EditCategController
+            });
 			$routeProvider.when('/createPost', {
 				templateUrl: 'partials/create.html',
 				controller: CreateController
