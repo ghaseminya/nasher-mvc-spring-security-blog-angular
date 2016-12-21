@@ -11,7 +11,7 @@ Admin panel + Home pages
 
 [Demo](http://jnasher.ir) => http://jnasher.ir
 
-[Admin Demo](http://admin.jnasher.ir) =>  http://admin.jnasher.ir 
+[Admin Demo](http://admin.jnasher.ir/admin/index.html) =>  http://admin.jnasher.ir 
 
 username/password=mnm
 
