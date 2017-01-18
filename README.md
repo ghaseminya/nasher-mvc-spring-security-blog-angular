@@ -1,8 +1,8 @@
 # [Nasher](https://github.com/mmghasemi/nasher)
 ===========================
-[![Build Status](https://travis-ci.org/mmghasemi/nasher-mvc-spring-security-blog-angular.svg?branch=master)](https://travis-ci.org/mmghasemi/nasher)
+[![Build Status](https://travis-ci.org/ghaseminya/nasher-mvc-spring-security-blog-angular.svg?branch=master)](https://travis-ci.org/mmghasemi/nasher)
 [![Apache License](http://img.shields.io/badge/license-apache2-orange.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
-[![Coverage Status](https://coveralls.io/repos/github/mmghasemi/nasher/badge.svg?branch=master)](https://coveralls.io/github/mmghasemi/nasher?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/ghaseminya/nasher/badge.svg?branch=master)](https://coveralls.io/github/mmghasemi/nasher?branch=master)
 
 
 Nasher is a light Java blogging system
